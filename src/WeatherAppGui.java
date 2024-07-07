@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class WeatherAppGui extends JFrame{
 
@@ -60,6 +61,16 @@ public class WeatherAppGui extends JFrame{
         JLabel weatherImage = new JLabel(loadImage("/Users/richmantan/Desktop/Programming/WeatherApp/src/Assets/cloudy.png"));
         weatherImage.setBounds(0, 125, 450, 217);
         add(weatherImage);
+
+        //Add temperature label
+        JLabel temperatureLabel = new JLabel("25 °C");
+        temperatureLabel.setBounds(0, 250, 450, 54);
+        temperatureLabel.setFont(new Font("Dialog", Font.BOLD, 48));
+
+        //Centre the text
+        temperatureLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        add(temperatureLabel);
+
     }
 
     private ImageIcon loadImage(String path){
